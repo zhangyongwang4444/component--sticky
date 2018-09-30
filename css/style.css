@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#topbar {
+    background: green;
+    height: 60px;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+}
+
+#topbar.sticky {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.topbarPlaceholder {
+    height: 60px;
+}
+
+main {
+    background: #ddd;
+    height: 800px;
+}
+
+button.sticky {
+    position: fixed;
+    left: 0;
+    top: 60px;
+}
