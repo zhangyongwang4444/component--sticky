@@ -26,6 +26,7 @@ class Sticky {
                 var $element = $(element)
                 if (scrollY + this.offset > this.offsets[index].top) {
                     $element.addClass('sticky')
+                        .css({ top: this.offset })
                 } else {
                     $element.removeClass('sticky')
                 }
