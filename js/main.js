@@ -2,8 +2,15 @@ class Sticky {
     constructor(selector, n) {
         this.elements = $(selector)
         this.offset = n || 0
+        this.addPlaceholder()
         this.cacheOffsets()
         this.listenToScroll()
+    }
+    addPlaceholder() {
+        this.elements.each((index, element) => {
+            $(element).wrap('<div class="stickyPlaceholder"></div>')
+            $(element).parent().height($(element).height())
+        })
     }
     cacheOffsets() {
         this.offsets = []
